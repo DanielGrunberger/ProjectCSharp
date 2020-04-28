@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="PLWPF.SeeAllUnitsUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PLWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="700"  d:DesignWidth="1650">
+    <Grid>
+
+
+        <DataGrid Background="LightGray"  Name="HostingUnitDataGrid" AlternatingRowBackground="LightYellow" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,114,-0.4,60" >
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="BurlyWood"/>
+                    <Setter Property="FontWeight" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="FontSize" Value="23"/>
+
+                </Style>
+
+
+            </DataGrid.Resources>
+
+
+
+            <!-- Data grid Colums  -->
+            <DataGrid.Columns>
+                <DataGridTextColumn FontSize="15" Header="Name"   Width="2*"   Binding="{Binding HostingUnitName}" />
+                <DataGridTextColumn FontSize="15" Header="Key" Width="*"  Binding="{Binding HostingUnitKey}"/>
+                <DataGridTextColumn FontSize="15" Header="Owner" Width="2*" Binding="{Binding Owner.FamilyName}"/>
+                <DataGridTextColumn FontSize="15" Header="Area" Width="*" Binding="{Binding Area}"/>
+                <DataGridTextColumn FontSize="15" Header="Max Adults" Width="*" Binding="{Binding Adults}"/>
+                <DataGridTextColumn FontSize="15" Header="Children" Width="*" Binding="{Binding Children}"/>
+                <DataGridTextColumn FontSize="15" Header="Type" Width="*" Binding="{Binding Type}"/>
+                <DataGridCheckBoxColumn  Header="Pool" Width="*" Binding="{Binding Pool}"/>
+                <DataGridCheckBoxColumn Header="Jaccuzi" Width="*" Binding="{Binding Jacuzzi}"/>
+                <DataGridCheckBoxColumn  Header="Garden" Width="*" Binding="{Binding Garden}"/>
+                <DataGridCheckBoxColumn  Header="Attraction" Width="*" Binding="{Binding ChildrensAttractions}"/>
+                <DataGridTextColumn Header="Sum to Pay" FontSize="15" Width="*" Binding="{Binding Sum_to_pay}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="EraseHostingUnitBT" Width="80" Background="Red" FontSize="15"  >Delete</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Area" FontSize="25" HorizontalAlignment="Left" Margin="433,34,0,0" VerticalAlignment="Top" Width="174" Height="43" Click="Button_Click"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="PLWPF.RatingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="" BorderBrush="Black" Height="268.443" Width="200" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="LightSkyBlue">
+    <Grid>
+        <materialDesign:RatingBar
+  Value="3"
+  x:Name="BasicRatingBar"
+  Margin="35,153,34,39" />
+        <materialDesign:PackIcon  Kind="SmileyHappyOutline" Margin="73,113,0,0" Width="49" Height="35" />
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="We hope you liked our service !" Foreground="Green" FontSize="24" VerticalAlignment="Top" Height="103" Width="174" FontFamily="Snap ITC"/>
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="53,187,0,0" VerticalAlignment="Top" Width="92" Height="42" />
+    </Grid>
+</Window>

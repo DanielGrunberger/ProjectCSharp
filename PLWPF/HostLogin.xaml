@@ -1,0 +1,38 @@
+﻿<Window x:Class="PLWPF.HostLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="HostLogin" Height="500" Width="600"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Border BorderBrush="Black" BorderThickness="2">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="IMAGES/backgroundwhite.jpg"/>
+            </Grid.Background>
+            <PasswordBox Name="PasswordBox" PasswordChar="*" HorizontalAlignment="Left" Height="49" Margin="134,351,0,0"  VerticalAlignment="Top" Width="352" FontFamily="Tahoma" FontSize="32"/>
+            <TextBox Name="UsernameBox" Background="Transparent" HorizontalAlignment="Left" Height="45" Margin="134,238,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="352" FontFamily="Tahoma" FontSize="32"/>
+            <StackPanel  HorizontalAlignment="Left" Height="174" Margin="233,25,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.5,0.5">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="IMAGES/avatar2.png"/>
+                </StackPanel.Background>
+                <StackPanel.RenderTransform>
+
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="0.281"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="0.517"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Height="202" Margin="266,10,0,0" VerticalAlignment="Top" Width="264"/>
+            <Label Content="USERNAME" Foreground="DarkBlue" FontSize="21"  HorizontalAlignment="Left" Margin="134,203,0,0" VerticalAlignment="Top" Width="157" Height="35"/>
+            <Label   Content="PASSWORD" Foreground="DarkBlue" FontSize="21"  HorizontalAlignment="Left" Margin="134,313,0,0" VerticalAlignment="Top" Width="119" Height="33"/>
+            <Button Name="LoginButton" Content="LOGIN" FontSize="19"  Background="SkyBlue" HorizontalAlignment="Left" Margin="199,422,0,0" VerticalAlignment="Top" Width="220" Height="38" Click="LoginButton_Click"/>
+
+
+        </Grid>
+    </Border>
+</Window>

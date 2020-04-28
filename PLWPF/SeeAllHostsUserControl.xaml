@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="PLWPF.SeeAllHostsUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PLWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="700"  d:DesignWidth="1700">
+    <Grid>
+        <DataGrid Name="HostsDataGrid" Background="LightGray"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,8,-0.4,60"  Grid.ColumnSpan="3" >
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="BurlyWood"/>
+                    <Setter Property="FontWeight" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="FontSize" Value="23"/>
+
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn FontSize="15" Header="Name"   Width="*"   Binding="{Binding PrivateName}" />
+                <DataGridTextColumn FontSize="15" Header="Key" Width="*"  Binding="{Binding HostKey}"/>
+                <DataGridTextColumn FontSize="15" Header="Lastname" Width="*" Binding="{Binding FamilyName}"/>
+                <DataGridTextColumn FontSize="15" Header="Phone" Width="*" Binding="{Binding PhoneNumber}"/>
+                <DataGridTextColumn FontSize="15" Header="Bank Acc" Width="*" Binding="{Binding BankAccountNumber}"/>
+                <DataGridTextColumn FontSize="15" Header="Mail" Width="*" Binding="{Binding MailAddress}"/>
+                <DataGridTextColumn FontSize="15" Header="Units" Width="*" Binding="{Binding NumOfUnits}"/>
+                <DataGridTextColumn Header="Collection" Width="*" Binding="{Binding CollecionClearance.ToString}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="EraseHostBT" Width="80" Background="Red" FontSize="15"  >Delete</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,35 @@
+﻿<Window x:Class="PLWPF.AdminLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="AdminLogin" Height="500" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="IMAGES/backgroundblue.jpg"/>
+        </Grid.Background>
+        <PasswordBox Name="PasswordBox" PasswordChar="*" HorizontalAlignment="Left" Height="49" Margin="134,342,0,0"  VerticalAlignment="Top" Width="352" FontFamily="Tahoma" FontSize="32"/>
+        <TextBox Name="UsernameBox" Background="White" HorizontalAlignment="Left" Height="45" Margin="134,238,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="352" FontFamily="Tahoma" FontSize="32"/>
+        <StackPanel  HorizontalAlignment="Left" Height="222" Margin="205,-2,0,0" VerticalAlignment="Top" Width="214" RenderTransformOrigin="0.5,0.5">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="IMAGES/avatar1.png"/>
+            </StackPanel.Background>
+            <StackPanel.RenderTransform>
+
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.281"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.517"/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="143" Margin="181,55,0,0" VerticalAlignment="Top" Width="264"/>
+        <Label Content="USERNAME" Foreground="Chocolate" FontSize="21"  HorizontalAlignment="Left" Margin="134,203,0,0" VerticalAlignment="Top" Width="157" Height="35"/>
+        <Label   Content="PASSWORD" Foreground="Chocolate" FontSize="21"  HorizontalAlignment="Left" Margin="134,304,0,0" VerticalAlignment="Top" Width="119" Height="33"/>
+        <Button Name="LoginButton" Content="LOGIN" FontSize="19" Background="Chocolate" HorizontalAlignment="Left" Margin="199,422,0,0" VerticalAlignment="Top" Width="220" Height="38" Click="LoginButton_Click"/>
+
+    </Grid>
+</Window>

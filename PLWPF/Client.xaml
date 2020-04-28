@@ -1,0 +1,21 @@
+﻿<Window x:Class="PLWPF.Client"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="Client" Height="500" Width="700" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="IMAGES/6.JPG"/>
+        </Grid.Background>
+        <Button Name="Add" Content="Add Request " HorizontalAlignment="Left" Margin="210,140,0,0" VerticalAlignment="Top" Width="298" Height="60" FontFamily="Sitka Heading" FontSize="30" Opacity="0.5" Click="Button_Click" RenderTransformOrigin="0.023,0.688" />
+        <Button Content="Update Your Request " HorizontalAlignment="Left" Margin="210,250,0,0" VerticalAlignment="Top" Width="298" Height="60" FontFamily="Sitka Heading" FontSize="30" Opacity="0.5" Click="Update_Click" />
+        <Button Name="Exit" Content="EXIT" HorizontalAlignment="Left" Width="185" FontFamily="Sitka Heading" FontSize="28" Opacity="0.5" Margin="0,0,0,411.2" Height="60" VerticalAlignment="Bottom" Click="Exit_Click" />
+        <Button x:Name="MyRequest" Content="Chek Your Request" HorizontalAlignment="Left" Margin="210,360,0,0" VerticalAlignment="Top" Width="298" Height="60" FontFamily="Sitka Heading" FontSize="30" Opacity="0.5" Click="MyRequest_Click_1"/>
+
+
+    </Grid>
+</Window>

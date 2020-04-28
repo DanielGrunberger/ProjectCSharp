@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="PLWPF.SeeRequestsUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PLWPF"
+             mc:Ignorable="d" 
+              d:DesignHeight="700"  d:DesignWidth="1700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Name="GuestRequestDataGrid" Background="LightGray" HorizontalAlignment="Left" AlternatingRowBackground="LightYellow" VerticalAlignment="Stretch" Margin="0,8,0,60"  Grid.ColumnSpan="2">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="BurlyWood"/>
+                    <Setter Property="FontWeight" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="FontSize" Value="23"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn FontSize="15" Header="Key"   Width="*"  Binding="{Binding GuestRequestKey}" />
+                <DataGridTextColumn FontSize="15" Header="ID"   Width="*"  Binding="{Binding ID}" />
+                <DataGridTextColumn FontSize="15" Header="Name"   Width="*"  Binding="{Binding PrivateName}" />
+                <DataGridTextColumn FontSize="15" Header="Last Name"   Width="*"  Binding="{Binding FamilyName}" />
+                <DataGridTextColumn FontSize="15" Header="Status"   Width="*"  Binding="{Binding Status}" />
+                <DataGridTextColumn FontSize="15" Header="Entry Date"   Width="*"  Binding="{Binding Entry_Date,StringFormat={}{0:dd/MM/yyyy}}" IsReadOnly="True" />
+                <DataGridTextColumn FontSize="15" Header="Rel. Date"   Width="*"  Binding="{Binding ReleaseDate,StringFormat={}{0:dd/MM/yyyy}}" IsReadOnly="True" />
+                <DataGridTextColumn FontSize="15" Header="Reg. Date"   Width="*"  Binding="{Binding RegistrationDate,StringFormat={}{0:dd/MM/yyyy}}" IsReadOnly="True" />
+                <DataGridTextColumn FontSize="15" Header="Area"   Width="*"  Binding="{Binding Area}" />
+                <DataGridTextColumn FontSize="15" Header="Type"   Width="*"  Binding="{Binding Type}" />
+                <DataGridTextColumn FontSize="15" Header="Adults"   Width="80"  Binding="{Binding Adults}" />
+                <DataGridTextColumn FontSize="15" Header="Children"   Width="84"  Binding="{Binding Children}" />
+                <DataGridTextColumn  FontSize="15" Header="Pool" Width="80" Binding="{Binding Pool}"/>
+                <DataGridTextColumn FontSize="15" Header="Jaccuzi" Width="*" Binding="{Binding Jacuzzi}"/>
+                <DataGridTextColumn  FontSize="15" Header="Garden" Width="*" Binding="{Binding Garden}"/>
+                <DataGridTextColumn  FontSize="15" Header="Attraction" Width="*" Binding="{Binding ChildrensAttractions}"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

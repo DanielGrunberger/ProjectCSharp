@@ -1,0 +1,106 @@
+﻿<Window x:Class="PLWPF.HostMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+          xmlns:local2="clr-namespace:BE;assembly=BE"
+        xmlns:codeg="clr-namespace:System;assembly=mscorlib"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="HostMenu" Height="750" Width="900"  WindowStartupLocation="CenterScreen"  Background="LightGray">
+    <Window.Resources>
+        <ObjectDataProvider MethodName="GetValues" ObjectType="{x:Type codeg:Enum}" x:Key="myenum4">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type Type="local2:Clearance"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="102*"/>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="93*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="105*"/>
+            <RowDefinition Height="81*"/>
+            <RowDefinition Height="59*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="169*"/>
+            <ColumnDefinition Width="277*"/>
+            <ColumnDefinition Width="148*"/>
+            <ColumnDefinition Width="270*"/>
+            <ColumnDefinition Width="30*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Text Boxes -->
+        <TextBlock FontFamily="Tempus Sans ITC" Background="LightSkyBlue" HorizontalAlignment="Left" Margin="45.2,-6,0,0" TextWrapping="Wrap" Text="Thank you for choosing us!" FontSize="28" VerticalAlignment="Top" Height="35" Grid.ColumnSpan="2" Width="326" Grid.Column="1" />
+        <TextBox   Name="NameTextBox" FontSize="22" Background="SeaShell" HorizontalAlignment="Left" Margin="47.2,23.4,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Height="40" Width="220" Grid.Column="1" TextChanged="NameTextBox_TextChanged"/>
+        <TextBox Name="LastnameTextBox" FontSize="22" Background="SeaShell" HorizontalAlignment="Left" Margin="46.2,23.2,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="40" Width="221" Grid.Column="1" TextChanged="LastnameTextBox_TextChanged"/>
+        <TextBox Name="PhoneTextBox" FontSize="22" Background="SeaShell" HorizontalAlignment="Left" Margin="46.2,24.8,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="40" Width="221" Grid.Column="1" TextChanged="PhoneTextBox_TextChanged"/>
+        <TextBox Name="MailTextBox" FontSize="22" Background="SeaShell" HorizontalAlignment="Left" Margin="47.2,23,0,0" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="40" Width="220" Grid.Column="1" TextChanged="MailTextBox_TextChanged"/>
+        <TextBox  Name="UsernameTextBox" FontSize="22" Background="SeaShell" HorizontalAlignment="Left" Margin="47.2,24.2,0,0" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="40" Width="220" Grid.Column="1" TextChanged="UsernameTextBox_TextChanged"/>
+
+
+        <TextBox Name="BankAccountTextBox" FontSize="22" Background="SeaShell" Grid.Column="3" HorizontalAlignment="Left" Height="40" Margin="32.4,23.4,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" TextChanged="BankAccountTextBox_TextChanged"/>
+        <TextBlock Name="BankNumberTextBox" FontSize="22" Background="SeaShell" Grid.Column="3" HorizontalAlignment="Left" Height="40" Margin="37.4,30.6,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" />
+        <ComboBox  x:Name="BankNameComboBox" FontSize="22" Background="Transparent" Grid.Column="3" HorizontalAlignment="Left" Height="40" Margin="32.4,22.2,0,0" Grid.Row="2"  Text="" VerticalAlignment="Top" Width="230" RenderTransformOrigin="0.196,0.483" SelectionChanged="BankNameComboBox_SelectionChanged" />
+        <TextBlock Name="BranchAddressTextBox" FontSize="22" Background="SeaShell" Grid.Column="3" HorizontalAlignment="Left" Height="40" Margin="32.4,23,0,0" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" />
+        <TextBlock  Name="BranchCityTextBox" Background="SeaShell" FontSize="22" Grid.Column="3" HorizontalAlignment="Left" Height="40" Margin="32.4,24.2,0,0" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" />
+        <TextBlock Name="BranchNumberTextBox" Background="SeaShell" FontSize="22" Grid.Column="3" HorizontalAlignment="Left" Height="40" Margin="32.4,24.2,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" />
+        <TextBox Name="PasswordTextBox" Background="SeaShell" FontSize="22" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="47,10,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219" TextChanged="PasswordTextBox_TextChanged"/>
+
+
+        <!--Labels -->
+        <Label Foreground="Black" Content="Name" FontFamily="Forte" FontSize="24" HorizontalAlignment="Left" Margin="10,23.4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="141" Height="40"/>
+        <Label Foreground="Black"  Content="Lastname" FontFamily="Forte" FontSize="24" HorizontalAlignment="Left" Margin="10,23.2,0,0" Grid.Row="2" VerticalAlignment="Top" Width="141" Height="40"/>
+        <Label Foreground="Black"  Content="Phone Num." FontFamily="Forte" FontSize="24" HorizontalAlignment="Left" Margin="10,19.8,0,0" Grid.Row="3" VerticalAlignment="Top" Width="141" Height="40"/>
+        <Label Foreground="Black"  Content="Mail" FontFamily="Forte" FontSize="24" HorizontalAlignment="Left" Margin="10,23,0,0" Grid.Row="4" VerticalAlignment="Top" Width="141" Height="40"/>
+        <Label Foreground="Black"  Content="Username" FontSize="24" FontFamily="Forte" HorizontalAlignment="Left" Margin="10,24,0,0" Grid.Row="5" VerticalAlignment="Top" Width="141" Height="40"/>
+        <Label Foreground="Black"  Content="Password" FontSize="24" HorizontalAlignment="Left" FontFamily="Forte" Margin="10,10,0,0" Grid.Row="6" VerticalAlignment="Top" Width="141" Height="40"/>
+        <Label Foreground="Black"  Content="Bank Acc." FontFamily="Forte" FontSize="24" HorizontalAlignment="Left" Margin="0.4,23.4,0,0" Grid.Row="1" VerticalAlignment="Top" Height="40" Width="141" Grid.Column="2"/>
+        <Label Foreground="Black"  Content="Bank Num."  FontSize="24" FontFamily="Forte" HorizontalAlignment="Left" Margin="7.4,24.6,0,0" Grid.Row="3" VerticalAlignment="Top" Height="40" Width="141" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Label Foreground="Black"  Content="Bank Name"  FontSize="24" FontFamily="Forte" HorizontalAlignment="Left" Margin="10.4,23.2,0,0" Grid.Row="2" VerticalAlignment="Top" Height="40" Width="141" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Label Foreground="Black"  Content="Branch Add."  FontSize="24" FontFamily="Forte" HorizontalAlignment="Left" Margin="0.4,23,0,0" Grid.Row="4" VerticalAlignment="Top" Height="40" Width="141" Grid.Column="2"/>
+        <Label Foreground="Black"   Content="Branch City" FontSize="24" FontFamily="Forte" HorizontalAlignment="Left" Margin="0.4,22.2,0,0" Grid.Row="5" VerticalAlignment="Top" Height="40" Width="141" Grid.Column="2"/>
+        <Label Foreground="Black"  Content="Branch Num." FontSize="24" FontFamily="Forte" HorizontalAlignment="Left" Margin="0.4,22.2,0,0" Grid.Row="6" VerticalAlignment="Top" Height="40" Width="141" Grid.Column="2"/>
+        <Label Foreground="Black"  Background="LightSkyBlue" Content="Already signed?" FontSize="23" HorizontalAlignment="Left" Margin="7.4,36,0,0" VerticalAlignment="Top" Height="40" Width="163" Grid.ColumnSpan="2" Grid.Column="2"  FontFamily="Tempus Sans ITC"/>
+
+        <TextBlock Background="LightSkyBlue" HorizontalAlignment="Left" Margin="0,68,0,0" TextWrapping="Wrap" Text="First Time? Sign in ! " FontSize="25" VerticalAlignment="Top" Height="34" Width="209" Grid.ColumnSpan="2" FontFamily="Tempus Sans ITC" Grid.RowSpan="2"/>
+        <Button Style="{DynamicResource MaterialDesignRaisedButton}"
+    materialDesign:ShadowAssist.ShadowDepth="Depth5" Foreground="Black"  Name="LoginButton" Background="LightYellow" Content="Log In" FontSize="25" Grid.Column="3" HorizontalAlignment="Left" Margin="40.4,39,0,0" VerticalAlignment="Top" Width="201" Height="39" Click="Button_Click_1"/>
+        <Button Foreground="Black"  Name="SignInButton" Background="LightYellow" Content="Sign In" FontSize="24" Grid.Column="3" HorizontalAlignment="Left" Margin="35.4,10.4,0,0" Grid.Row="7" VerticalAlignment="Top" Width="210" Height="39" Click="Button_Click"/>
+        <Label Name="MailLabel" FontSize="13" Content="" HorizontalAlignment="Left" Margin="47.2,67.8,0,0" Grid.Row="4" VerticalAlignment="Top"   Grid.Column="1" Height="26" Width="219"/>
+        <Label Content=""  Name="NameLabel"  FontSize="13" Grid.Column="1" HorizontalAlignment="Left" Margin="47.2,63.4,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="220" Grid.RowSpan="2"/>
+        <Label Content=""  Name="PasswordLabel"  FontSize="13" Grid.Column="1" HorizontalAlignment="Left" Margin="47.2,70.2,0,0" Grid.Row="6" VerticalAlignment="Top" Height="26" Width="220" Grid.RowSpan="2"/>
+        <Label Content=""  Name="LastNameLabel"  FontSize="13" Grid.Column="1" HorizontalAlignment="Left" Margin="47.2,68.2,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="220" Grid.RowSpan="2"/>
+        <Label Content=""  Name="PhoneLabel"  FontSize="13" Grid.Column="1" HorizontalAlignment="Left" Margin="47.2,69.6,0,0" Grid.Row="3" VerticalAlignment="Top" Height="26" Width="220" Grid.RowSpan="2"/>
+        <Label Content=""  Name="UsernameLabel"  FontSize="13" Grid.Column="1" HorizontalAlignment="Left" Margin="45.2,69,0,0" Grid.Row="5" VerticalAlignment="Top" Height="26" Width="232" Grid.ColumnSpan="2"/>
+        <Label Content=""  Name="PassswordLabel"  FontSize="13" Grid.Column="4" HorizontalAlignment="Left" Margin="259.8,43.4,-447.4,-5.2" Grid.Row="7" VerticalAlignment="Top" Height="21" Width="218"/>
+        <Label Content=""  Name="BankAccLabel"  FontSize="13" Grid.Column="3" HorizontalAlignment="Left" Margin="35.4,68.4,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="224" Grid.RowSpan="2"/>
+        <Label Content=""  Name="BankNumLabel"  FontSize="13" Grid.Column="3" HorizontalAlignment="Left" Margin="40.4,75.6,0,0" Grid.Row="3" VerticalAlignment="Top" Height="26" Width="222" Grid.RowSpan="2"/>
+        <Label Content=""  Name="BankNameLabel"  FontSize="13" Grid.Column="3" HorizontalAlignment="Left" Margin="35.4,68.2,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="227" Grid.RowSpan="2"/>
+        <Label Content=""  Name="BranchAddLabel"  FontSize="13" Grid.Column="3" HorizontalAlignment="Left" Margin="35.4,62.8,0,0" Grid.Row="4" VerticalAlignment="Top" Height="26" Width="232"/>
+        <Label Content=""  Name="BranchCityLabel"  FontSize="13" Grid.Column="3" HorizontalAlignment="Left" Margin="37.4,69,0,0" Grid.Row="5" VerticalAlignment="Top" Height="26" Width="232"/>
+        <Label Content=""  Name="BranchNumLabel"  FontSize="13" Grid.Column="3" HorizontalAlignment="Left" Margin="35.4,60.2,0,0" Grid.Row="6" VerticalAlignment="Top" Height="26" Width="224" Grid.RowSpan="2"/>
+        <Button Style="{DynamicResource MaterialDesignRaisedButton}"
+    materialDesign:ShadowAssist.ShadowDepth="Depth5" Foreground="Black"  FontSize="25" Background="LightYellow" Grid.ColumnSpan="2" Content="Back" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="177" Height="53" Click="Button_Click_2"/>
+        <Label Content="{materialDesign:PackIcon AccountLock}" ToolTip="Icon" Foreground="Purple"  HorizontalAlignment="Left" Margin="13,31,0,0" Grid.Row="5" VerticalAlignment="Top" Height="31" Width="27" Grid.Column="1"/>
+        <Label Content="{materialDesign:PackIcon UserKeyOutline}" Foreground="Purple" HorizontalAlignment="Left" Margin="16,18,0,0" Grid.Row="6" VerticalAlignment="Top" Height="32" Grid.Column="1"/>
+        <Label Content="{materialDesign:PackIcon Email}"  ToolTip="Icon" Background="Purple" HorizontalAlignment="Left" Margin="16,36,0,0" Grid.Row="4" VerticalAlignment="Top" Width="24" Height="27" Grid.Column="1"/>
+        <Label Content="{materialDesign:PackIcon ContactPhone}" Background="Purple" HorizontalAlignment="Left" Margin="13,31,0,0" Grid.Row="3" VerticalAlignment="Top" Height="29" Width="27" Grid.Column="1"/>
+        <TextBlock FontFamily="Forte"  HorizontalAlignment="Left" Margin="10,71,0,0" Grid.Row="6" TextWrapping="Wrap" Text="Collection Clearance" FontSize="23" VerticalAlignment="Top" Height="68" Width="149" Grid.RowSpan="2"/>
+        <ComboBox  Name="ClearanceComboBox" ItemsSource="{Binding Source={StaticResource myenum4}}" Grid.Column="1" HorizontalAlignment="Left" Margin="74,0,0,0" VerticalAlignment="Top" Width="202" Height="32" Grid.Row="7" />
+        <Label Name="ClearanceLabel"  HorizontalAlignment="Left" Margin="74,32,0,0" Grid.Row="7" VerticalAlignment="Top" Grid.Column="1" Width="192" Height="27"/>
+
+        <materialDesign:PackIcon Kind="Login"  Width="82" Margin="100,0,0,-5" Grid.Row="7" Height="64" Foreground="Purple" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+
+
+
+    </Grid>
+
+</Window>

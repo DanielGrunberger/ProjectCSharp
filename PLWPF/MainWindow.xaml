@@ -1,0 +1,40 @@
+﻿<Window x:Class="PLWPF.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+  
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+     Title="Vacations Paradise"  FontSize="18" Height="450" Width="650" Icon="IMAGES/12.ico.jpg" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="320*"/>
+            <ColumnDefinition Width="140*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource ="IMAGES/8.jpg"/>
+        </Grid.Background>
+        <Button Name="admin_button"  Content="Admin" HorizontalAlignment="Left" Margin="69.2,10.2,0,0" VerticalAlignment="Top" Width="220" Height="60" FontFamily="Lucida Fax" FontSize="32" Click="AdminButton_Click" Grid.Row="1" Opacity="0.6" Grid.Column="1"/>
+        <Button Name="client_button" Content="Client" HorizontalAlignment="Left" Margin="69.2,10.4,0,0" VerticalAlignment="Top" Width="220" Height="60" FontSize="32" FontFamily="Lucida Fax" Click="ClientButton_Click" Grid.Row="2" Opacity="0.6" Grid.Column="1"/>
+        <Button Name="host_button" Content="Host" HorizontalAlignment="Left" Margin="69.2,9.6,0,0" VerticalAlignment="Top" Width="220" Height="60" FontSize="32" FontFamily="Lucida Fax" Click="HostButton_Click" Grid.Column="1" Grid.Row="3" Opacity="0.6"/>
+        <TextBlock HorizontalAlignment="Left" Margin="145,10,0,0" Foreground="Black" TextWrapping="Wrap" Text="Welcome to Vacation paradise!" VerticalAlignment="Top" RenderTransformOrigin="0.289,1.088" Width="360" Height="65" FontSize="29" FontFamily="Curlz MT" Grid.ColumnSpan="3" FontWeight="Bold" FontStyle="Italic"/>
+       
+
+    </Grid>
+</Window>

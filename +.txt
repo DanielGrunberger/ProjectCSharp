@@ -1,0 +1,15 @@
+﻿1>------ Build started: Project: PLWPF, Configuration: Debug Any CPU ------
+1>C:\Users\Grunba\source\repos\Project01_2883_4046_dotNet5780\PLWPF\HostMenu.xaml.cs(207,34,207,36): warning CS0168: The variable 'ex' is declared but never used
+1>C:\Users\Grunba\source\repos\Project01_2883_4046_dotNet5780\PLWPF\HostMenu.xaml.cs(292,29,292,31): warning CS0168: The variable 'ex' is declared but never used
+1>C:\Users\Grunba\source\repos\Project01_2883_4046_dotNet5780\PLWPF\UnitToUpdateWindow.xaml.cs(78,34,78,36): warning CS0168: The variable 'ex' is declared but never used
+1>C:\Users\Grunba\source\repos\Project01_2883_4046_dotNet5780\PLWPF\UnitToUpdateWindow.xaml.cs(91,34,91,36): warning CS0168: The variable 'ex' is declared but never used
+1>C:\Users\Grunba\source\repos\Project01_2883_4046_dotNet5780\PLWPF\AddUnitWindow.xaml.cs(39,33,39,35): warning CS0168: The variable 'ex' is declared but never used
+1>C:\Users\Grunba\source\repos\Project01_2883_4046_dotNet5780\PLWPF\AddUnitWindow.xaml.cs(52,34,52,36): warning CS0168: The variable 'ex' is declared but never used
+1>C:\Users\Grunba\source\repos\Project01_2883_4046_dotNet5780\PLWPF\HostMenu.xaml.cs(207,34,207,36): warning CS0168: The variable 'ex' is declared but never used
+1>C:\Users\Grunba\source\repos\Project01_2883_4046_dotNet5780\PLWPF\HostMenu.xaml.cs(292,29,292,31): warning CS0168: The variable 'ex' is declared but never used
+1>C:\Users\Grunba\source\repos\Project01_2883_4046_dotNet5780\PLWPF\UnitToUpdateWindow.xaml.cs(78,34,78,36): warning CS0168: The variable 'ex' is declared but never used
+1>C:\Users\Grunba\source\repos\Project01_2883_4046_dotNet5780\PLWPF\UnitToUpdateWindow.xaml.cs(91,34,91,36): warning CS0168: The variable 'ex' is declared but never used
+1>C:\Users\Grunba\source\repos\Project01_2883_4046_dotNet5780\PLWPF\AddUnitWindow.xaml.cs(39,33,39,35): warning CS0168: The variable 'ex' is declared but never used
+1>C:\Users\Grunba\source\repos\Project01_2883_4046_dotNet5780\PLWPF\AddUnitWindow.xaml.cs(52,34,52,36): warning CS0168: The variable 'ex' is declared but never used
+1>  PLWPF -> C:\Users\Grunba\source\repos\Project01_2883_4046_dotNet5780\PLWPF\bin\Debug\PLWPF.exe
+========== Build: 1 succeeded, 0 failed, 4 up-to-date, 0 skipped ==========
