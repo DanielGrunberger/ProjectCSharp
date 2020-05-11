@@ -14,7 +14,7 @@ namespace DAL
         public static DAL.Idal getDal()
         {
             if (null == instance)
-                instance = new imp_XML_Dal();
+                instance = new Dal_imp();
             return instance;
         }
     }

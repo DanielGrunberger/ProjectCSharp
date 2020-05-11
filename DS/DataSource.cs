@@ -79,6 +79,42 @@ namespace DS
                 Type=type.Hotel,
                 HostingUnitName="Beautiful Zimmer"
             },
+             new HostingUnit()
+            {
+                HostingUnitKey=Configuration.HostingUnit_Key,
+                Owner=new Host()
+                {
+                    PrivateName="Eliahu",
+                    FamilyName="Yosef",
+                    BankBranchDetails = new BankBranch()
+                    {
+
+                        BankName="Caspomat",
+                        BankNumber=124,
+                        BranchAddress="Shlomo Hamelech 10",
+                        BranchCity="Bnei Brak",
+                        BranchNumber=6574
+                    },
+                    BankAccountNumber=46352,
+                    CollectionClearance=Clearance.Yes,
+                    HostKey=Configuration.Host_Key,
+                    MailAddress="eliyahu18@hotmail.com",
+                    PhoneNumber=648442075,
+                    Username ="Eliahu",
+                    Password="456",
+                    NumOfUnits=1
+
+                },
+                ChildrensAttractions=true,
+                Pool=true,
+                Jacuzzi=false,
+                Garden=false,
+                Adults=3,
+                Children=2,
+                Area=Area.Jerusalem,
+                Type=type.Hotel,
+                HostingUnitName="Eliahu Zimmer"
+            },
             new HostingUnit()
             {
                 HostingUnitKey=Configuration.HostingUnit_Key,
